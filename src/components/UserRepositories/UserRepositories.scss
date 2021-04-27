@@ -1,0 +1,73 @@
+@import "../../assets/scss/variables";
+
+.repositories-content {
+  padding: 40px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px;
+    overflow: auto;
+    height: calc(100vh - 139px);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+
+.repositories__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.repositories__item {
+  padding: 20px;
+  border-radius: 8px;
+  background: $gray;
+  margin-bottom: 20px;
+  transition: 0.3s;
+
+  @media screen and (min-width: 768px) {
+    width: calc(50% - 10px);
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.respotories__item-title {
+  a {
+    color: white;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $white;
+      text-decoration: unset;
+    }
+  }
+}
+
+.respotories__item-description {
+  margin: 20px 0 0;
+  color: $white;
+}
+
+.respotories__item-languages {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.respotories__item-languages-item {
+  color: $blue;
+  font-size: 0.7rem;
+}

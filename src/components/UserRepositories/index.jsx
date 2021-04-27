@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { search } from "../../api/api";
-const UserRepositories = () => {
-  const { userAccount } = useParams();
+import { useHistory } from "react-router-dom";
+import "./UserRepositories.scss";
+
+const UserRepositories = ({ userAccount, getUserRepos }) => {
+  let history = useHistory();
   const [repositories, setRepositories] = useState([]);
 
+  const handleGetRepos = async (userAccount) => {
+    try {
+      setRepositories(await getUserRepos(userAccount));
+    } catch (e) {
+      history.push("/empty-search");
+    }
+  };
+
   useEffect(() => {
-    search(`users/${userAccount}/repos`, setRepositories);
-  }, []);
+    handleGetRepos(userAccount).then();
+  }, [userAccount, handleGetRepos]);
 
   return (
     <main className="repositories-content">
@@ -18,11 +27,9 @@ const UserRepositories = () => {
             <h3 className="respotories__item-title">
               <a href={repositorie.html_url}>{repositorie.name}</a>
             </h3>
-
             <p className="respotories__item-description">
               {repositorie.description}
             </p>
-
             <ul className="respotories__item-languages">
               <li className="respotories__item-languages-item">
                 {repositorie.language}

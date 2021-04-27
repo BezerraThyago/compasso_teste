@@ -1,0 +1,55 @@
+.main-btn {
+  font-weight: 500;
+  color: white;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: $white;
+    background-color: unset;
+    border: 1px solid white;
+  }
+}
+
+.main-btn--bg-gray {
+  background-color: $darkgray;
+}
+
+.main-btn--bg-black{
+  background-color: $black;
+}
+
+.main-btn--bg-darkergray{
+  background-color: $darkergray;
+}
+
+.main-btn--bg-darkgray{
+  background-color: $darkgray;
+}
+
+.main-btn--bg-gray{
+  background-color: $gray;
+}
+
+.main-btn--bg-lightgray{
+  background-color: $lightgray;
+}
+
+.main-btn--bg-lightergray{
+  background-color: $lightergray;
+}
+
+.main-btn--bg-blue{
+  background-color: $blue;
+}
+
+.main-btn--bg-red{
+  background-color: $red;
+}
+
+.main-btn--yellow{
+  background-color: $yellow;
+}
+
+.main-btn--white{
+  background-color: $white;
+}

@@ -1,0 +1,24 @@
+.empty-search__content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.empty-search__content-search-box {
+  margin: auto;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.empty-search__content-git-logo {
+  max-width: 250px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 100px;
+    margin: auto 20px auto 0;
+  }
+}
