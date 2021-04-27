@@ -1,17 +1,17 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
 
 .header-container {
   border-bottom: 1px solid $darkgray;
   padding: 60px 30px 40px;
 }
 
-.header__logo-link{
+.header__logo-link {
   display: block;
   max-width: 300px;
   margin: 0 auto 40px;
 
-  @media screen and (min-width: 768px){
-    margin: 0 auto 0 0
+  @media screen and (min-width: 768px) {
+    margin: 0 auto 0 0;
+    max-width: 141px;
   }
 }
-
