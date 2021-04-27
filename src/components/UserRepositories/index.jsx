@@ -10,7 +10,7 @@ const UserRepositories = ({ userAccount, getUserRepos }) => {
     try {
       setRepositories(await getUserRepos(userAccount));
     } catch (e) {
-      history.push("/empty-search");
+      history.push("/empty-search/not-find");
     }
   };
 
@@ -25,7 +25,9 @@ const UserRepositories = ({ userAccount, getUserRepos }) => {
         {repositories.map((repositorie) => (
           <article className="repositories__item">
             <h3 className="respotories__item-title">
-              <a href={repositorie.html_url}>{repositorie.name}</a>
+              <a href={repositorie.html_url} target="_blank">
+                {repositorie.name}
+              </a>
             </h3>
             <p className="respotories__item-description">
               {repositorie.description}

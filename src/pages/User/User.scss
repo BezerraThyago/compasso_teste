@@ -1,15 +1,15 @@
-@import '../../assets/scss/variables';
+@import "../../assets/scss/variables";
 
 .user-info__header {
   display: flex;
   margin-bottom: 30px;
   color: white;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
-.user-info{
+.user-info {
   @media screen and (min-width: 768px) {
-    height: calc(100vh - 139px)
+    height: calc(100vh - 139px);
   }
 }
 

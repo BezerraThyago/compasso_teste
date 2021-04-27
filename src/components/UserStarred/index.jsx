@@ -9,7 +9,7 @@ const UserStarred = ({ userAccount, getUserStarred }) => {
     try {
       setStarred(await getUserStarred(userAccount));
     } catch (e) {
-      history.push("/empty-search");
+      history.push("/empty-search/not-find");
     }
   };
 
@@ -24,7 +24,9 @@ const UserStarred = ({ userAccount, getUserStarred }) => {
         {starreds.map((starred) => (
           <article className="repositories__item">
             <h3 className="respotories__item-title">
-              <a href={starred.html_url}>{starred.full_name}</a>
+              <a href={starred.html_url} target="_blank">
+                {starred.full_name}
+              </a>
             </h3>
             <p className="respotories__item-description">
               {starred.description}

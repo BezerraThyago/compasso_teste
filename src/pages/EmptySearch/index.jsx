@@ -17,6 +17,9 @@ const EmptySearch = () => {
                 fluid
               />
               <UserSearchInput />
+              <span className="empty-search__alert">
+                Usuário não encontrado, tente novamente
+              </span>
             </div>
           </div>
         </Col>

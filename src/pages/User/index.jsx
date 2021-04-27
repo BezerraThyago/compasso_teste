@@ -17,7 +17,7 @@ const User = () => {
     try {
       setUser(await getUserData(userAccount));
     } catch (e) {
-      history.push("/erro/404");
+      history.push("/empty-search/not-find");
     }
   };
 

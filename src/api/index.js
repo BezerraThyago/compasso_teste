@@ -8,8 +8,3 @@ const oAuthClient = {
 export const api = axios.create({
   baseURL: "https://api.github.com/",
 });
-
-export const search = async (url, setData) => {
-  const response = await api.get(url);
-  setData(response.data);
-};
