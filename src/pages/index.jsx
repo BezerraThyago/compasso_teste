@@ -14,7 +14,7 @@ const AppRoutes = () => {
         <Route exact path="/:userAccount">
           <User />
         </Route>
-        <Route path="/empty-search" t>
+        <Route path="/empty-search/not-find" t>
           <EmptySearch />
         </Route>
       </Switch>

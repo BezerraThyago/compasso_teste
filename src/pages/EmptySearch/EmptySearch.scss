@@ -1,3 +1,5 @@
+@import "../../assets/scss/variables";
+
 .empty-search__content {
   height: 100vh;
   display: flex;
@@ -10,6 +12,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    position: relative;
   }
 }
 
@@ -20,5 +23,16 @@
   @media screen and (min-width: 768px) {
     max-width: 100px;
     margin: auto 20px auto 0;
+  }
+}
+
+.empty-search__alert {
+  color: $red;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    left: 120px;
+    bottom: 0;
+    transform: translateY(100%);
   }
 }
